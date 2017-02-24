@@ -4,7 +4,7 @@
 	<title>Tweet Search</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Bootstrap core CSS -->
-    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/tweet.css">
 	
 </head>
@@ -23,34 +23,53 @@
           <a class="navbar-brand" href="#" style="color: #FFF; font: Helvetica;">Tweet Search</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><i class="fa fa-twitter fa-4" style="color: #FFF;"></i></a></li>
-            <li><a href="#" class="follow"><input type="text" placeholder="@MyUser" class="form-control input-sm"></a></li>
+          <ul class="nav navbar-nav navbar-right row">
+            <li><a href="#"><span class="input-group-addon" id="sizing-addon3" style="width: 45px"><i class="fa fa-twitter fa-4"></i></span></a></li>
+            <li><a href="#"><input type="text" placeholder="@MyUser" class="form-control input-sm" id="campo"></a></li>
+            <li><a href="#"><button class="btn btn-default btn-sm" id="search"><i class=" fa fa-search fa-5"></i></button></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
-<div class="tweet">
-  <a href="#" class="follow"><i class="fa fa-twitter"></i>Follow</a>
-  
-  <div class="tweet--user">
-    <img class="tweet--user-avatar" src="https://fillmurray.com/50/50" alt="" />
-    <div class="tweet--user-name">Bill Murray<span>@bill</span></div>
+  <h2>SearchTweet 1.0</h2>
+  <div class="container">
+    <div class="col-sm-12" id="post">
+      
+    </div>
   </div>
   
-  <p class="tweet--body">This is a real tweet from Bill Murray. Trust me, I'm not lying.</p>
-  
-  <div class="tweet--time">11:11 AM - 1 Jan 14</div>
-  
-  <div class="tweet--actions">
-    <i class="fa fa-ellipsis-h"></i>
-    <i class="fa fa-heart"></i>
-    <i class="fa fa-retweet"></i>
-    <i class="fa fa-reply"></i>
-    <span>51 retweets</span>
-  </div>
-</div>
 
+  <h2>Prueba de tweet</h2>
+  <div class="tweet">
+    <a href="#" class="follow"><i class="fa fa-twitter"></i>Follow</a>
+    
+    <div class="tweet--user">
+      <img class="tweet--user-avatar" src="http://i0.kym-cdn.com/photos/images/newsfeed/000/406/346/fd3.jpg" alt="" style="height: 50px" />
+      <div class="tweet--user-name">Omar G<span>@Me</span></div>
+    </div>
+    
+    <p class="tweet--body">This is a real tweet from Omar. Trust me, I'm not lying.</p>
+    
+    <div class="tweet--time">11:11 AM - 22 Feb 17</div>
+    
+    <div class="tweet--actions">
+      <i class="fa fa-ellipsis-h"></i>
+      <i class="fa fa-heart"></i>
+      <i class="fa fa-retweet"></i>
+      <i class="fa fa-reply"></i>
+      <span>51 retweets</span>
+    </div>
+  </div>
+  <!-- jQuery -->
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"><\/script>')</script>
+  <!-- Bootstrap -->
+  <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+  <!-- functions -->
+  <script src="assets/js/functions.js"></script>
 </body>
 </html>
