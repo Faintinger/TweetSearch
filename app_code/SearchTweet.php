@@ -7,7 +7,8 @@
 	{
 		$userName = $_POST["myUser"];
 		$time_line = $twitter_con -> get("statuses/home_timeline", ["count" => 25, "exclude_replies" => true]);
-		echo ($time_line);
+        $info = (array)@json_decode($time_line, true);
+		echo json_encode($info);
 	}
 
 	//GET https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=twitterapi&count=2
@@ -18,7 +19,7 @@
         $method = 'GET';
         $params = '?screen_name=' . $toSearch;
         $count = '&count=25';
-        $data = $twitter_con -> request($url, $method, $params . $count);
+        $data = $twitter_con -> get($url, $method, $params . $count);
         $info = (array)@json_decode($data, true);
         echo json_encode($info);
     }
@@ -31,7 +32,7 @@
         $url    = 'https://api.twitter.com/1.1/search/tweets.json';
         $method = 'GET';
         $params = '?q=' . $toSearch;
-        $data = $twitter_con -> request($url, $method, $params);
+        $data = $twitter_con -> get($url, $method, $params);
         $info = (array)@json_decode($data, true);
         echo json_encode($info);
     }

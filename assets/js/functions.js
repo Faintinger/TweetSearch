@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$.ajax({
 	type: "POST",
-	url: "../TweetSearch/app_code/SearchTweet.php",
+	url: "../TweetSearch/app_code/TweetCore.php",
 	data: {
 		myUser : 0,
 	},
@@ -23,11 +23,11 @@ $("#search").click(function(){
 	if(busqueda != "") {
 		if(busqueda.charAt(0) == '#') {
 			$("#post").empty();
-			getTweets(busqueda);
+			getTweets(busqueda.substring(1));
 		}
 		else if(busqueda.charAt(0) == '@') {
 			$("#post").empty();
-			getTimeLine(busqueda);
+			getTimeLine(busqueda.substring(1));
 		}
 	}
 });
@@ -68,7 +68,7 @@ function getTimeLine(userId)
 {
 	$.ajax({
 	type: "POST",
-	url: "../TweetSearch/app_code/SearchTweet.php",
+	url: "../TweetSearch/app_code/TweetCore.php",
 	data: {
 		user : userId,
 	},
@@ -89,7 +89,7 @@ function getTweets(tag)
 {
 	$.ajax({
 	type: "POST",
-	url: "../TweetSearch/app_code/SearchTweet.php",
+	url: "../TweetSearch/app_code/TweetCore.php",
 	data: {
 		hashtag : tag,
 	},
