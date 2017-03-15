@@ -39,6 +39,7 @@
         $url    = 'https://api.twitter.com/1.1/search/tweets.json';
         $method = 'GET';
         $params = '?q=' . $toSearch;
+        $count = '&count=25';
         $data = $twitter_con -> setGetfield($params . $count)
                 -> buildOauth($url, $method)
                 -> performRequest();
