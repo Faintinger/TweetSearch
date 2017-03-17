@@ -8,6 +8,7 @@ $(document).ready(function(){
 	dataType: "json",
 	contentType: 'application/x-www-form-urlencoded',
 	success: function(result) {
+		//var result = jQuery.parseJSON(result);
 		for (var i = 0; i < result.length; i++) {
 			alert(result);
 			appendTweet(result[i]);
@@ -35,7 +36,7 @@ $("#search").click(function(){
 
 function appendTweet(result)
 {
-	var tweet = jQuery.parseJSON(result);
+	//var tweet = jQuery.parseJSON(result);
 	var space = $("#post");
 	if(img == "") ImgV = "hidden"; else ImgV = "";
 	if(vid == "") VidV = "hidden"; else VidV = "";
@@ -76,6 +77,7 @@ function getTimeLine(userId)
 	dataType: "json",
 	contentType: 'application/x-www-form-urlencoded',
 	success: function(result) {
+		//var result = jQuery.parseJSON(result);
 		for (var i = 0; i < result.length; i++) {
 			appendTweet(result[i]);
 		}
@@ -97,6 +99,7 @@ function getTweets(tag)
 	dataType: "json",
 	contentType: 'application/x-www-form-urlencoded',
 	success: function(result) {
+		//var result = jQuery.parseJSON(result);
 		for (var i = 0; i < result.length; i++) {
 			appendTweet(result[i]);
 		}
