@@ -7,7 +7,7 @@
 	{
         $url    = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
         $method = 'GET';
-        $params = '?screen_name=' . $toSearch;
+        $params = '?exclude_replies=true';
         $count = '&count=25';
         $data = $twitter_con -> setGetfield($params . $count)
                 -> buildOauth($url, $method)

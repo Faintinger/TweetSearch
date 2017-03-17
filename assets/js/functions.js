@@ -9,6 +9,7 @@ $(document).ready(function(){
 	contentType: 'application/x-www-form-urlencoded',
 	success: function(result) {
 		for (var i = 0; i < result.length; i++) {
+			alert(result);
 			appendTweet(result[i]);
 		}
 	},
@@ -23,11 +24,11 @@ $("#search").click(function(){
 	if(busqueda != "") {
 		if(busqueda.charAt(0) == '#') {
 			$("#post").empty();
-			getTweets(busqueda.substring(1));
+			getTweets(busqueda.substring(1, busqueda.length));
 		}
 		else if(busqueda.charAt(0) == '@') {
 			$("#post").empty();
-			getTimeLine(busqueda.substring(1));
+			getTimeLine(busqueda.substring(1, busqueda.length));
 		}
 	}
 });
